@@ -119,11 +119,12 @@ Visit in Browser
 
 Frontend: http://localhost:4200
 Backend API: http://localhost:8080/api/
+```
 <!--📷 Screenshots
 (Add your real screenshots in the assets/screenshots/ folder and embed below)-->
 
 <p align="center"> <img src="assets/screenshots/dashboard.png" width="90%" /> <img src="assets/screenshots/user-management.png" width="90%" /> </p>
-```
+
 ---
 🤝 Contributing
 Contributions are welcome! To get started:
@@ -147,6 +148,6 @@ Distributed under the MIT License. See LICENSE for more information.
 Waseem Sk Dev
 📍 Pune, Maharashtra
 📫 shaikhrgp@gmail.com
+```
 
-
-<p align="center">⭐️ Star this repo to support the project!</p> ```
+<p align="center">⭐️ Star this repo to support the project!</p>
