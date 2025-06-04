@@ -144,10 +144,9 @@ Open a pull request
 📝 License
 Distributed under the MIT License. See LICENSE for more information.
 ```
-👤 Author
+
 Waseem Sk Dev
 📍 Pune, Maharashtra
 📫 shaikhrgp@gmail.com
 ```
-
 <p align="center">⭐️ Star this repo to support the project!</p>
