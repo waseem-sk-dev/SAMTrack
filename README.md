@@ -1,16 +1,16 @@
 <!-- PROJECT SHIELD BADGES -->
 <p align="center">
-  <a href="https://github.com/yourusername/samtrack">
-    <img src="https://img.shields.io/github/stars/yourusername/samtrack.svg?style=for-the-badge" alt="Stars">
+  <a href="https://github.com/waseem-sk-dev/samtrack">
+    <img src="https://img.shields.io/github/stars/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Stars">
   </a>
-  <a href="https://github.com/yourusername/samtrack">
-    <img src="https://img.shields.io/github/forks/yourusername/samtrack.svg?style=for-the-badge" alt="Forks">
+  <a href="https://github.com/waseem-sk-dev/samtrack">
+    <img src="https://img.shields.io/github/forks/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Forks">
   </a>
-  <a href="https://github.com/yourusername/samtrack/issues">
-    <img src="https://img.shields.io/github/issues/yourusername/samtrack.svg?style=for-the-badge" alt="Issues">
+  <a href="https://github.com/waseem-sk-dev/samtrack/issues">
+    <img src="https://img.shields.io/github/issues/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Issues">
   </a>
-  <a href="https://github.com/yourusername/samtrack/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/yourusername/samtrack.svg?style=for-the-badge" alt="License">
+  <a href="https://github.com/waseem-sk-dev/samtrack/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="License">
   </a>
 </p>
 
@@ -64,7 +64,7 @@
 ---
 
 ## 📁 Project Structure
-
+```
 samtrack/
 ├── backend/
 │ └── src/main/java/com/samtrack/
@@ -78,7 +78,7 @@ samtrack/
 │ ├── services/
 │ ├── models/
 │ └── pages/
-
+```
 
 ---
 
@@ -93,17 +93,18 @@ samtrack/
 - [MySQL](https://www.mysql.com/)
 
 ### Installation
-
+```
 1. **Clone the repo**
 ```bash
 git clone https://github.com/yourusername/samtrack.git
-
+```
 Backend Setup
 
 ```bash
 cd samtrack/backend
 mvn clean install
 mvn spring-boot:run
+```
 Frontend Setup
 
 ```bash
@@ -111,6 +112,8 @@ cd samtrack/frontend
 npm install
 ng serve
 Visit in Browser
+```
+---
 
 ```bash
 
@@ -120,6 +123,8 @@ Backend API: http://localhost:8080/api/
 (Add your real screenshots in the assets/screenshots/ folder and embed below)
 
 <p align="center"> <img src="assets/screenshots/dashboard.png" width="90%" /> <img src="assets/screenshots/user-management.png" width="90%" /> </p>
+```
+---
 🤝 Contributing
 Contributions are welcome! To get started:
 
