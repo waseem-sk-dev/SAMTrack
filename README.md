@@ -80,7 +80,7 @@ samtrack/
 │ └── pages/
 ```
 
----
+
 
 ## ⚙️ Getting Started
 
@@ -92,7 +92,7 @@ samtrack/
 - [Maven](https://maven.apache.org/)
 - [MySQL](https://www.mysql.com/)
 
-  ---
+  
 
 ### Installation
 
@@ -141,9 +141,7 @@ Push to the branch: git push origin feature/my-feature
 
 Open a pull request
 ```
----
-
-📝 License
+### License
 Distributed under the MIT License. See LICENSE for more information.
 
 <pre>
