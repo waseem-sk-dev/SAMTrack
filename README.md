@@ -92,7 +92,7 @@ samtrack/
 - [Maven](https://maven.apache.org/)
 - [MySQL](https://www.mysql.com/)
 
-  
+---  
 
 ### Installation
 
