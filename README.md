@@ -64,7 +64,7 @@
 
 
 ## 📁 Project Structure
-```
+<pre>
 samtrack/
 ├── backend/
 │ └── src/main/java/com/samtrack/
@@ -78,8 +78,7 @@ samtrack/
 │ ├── services/
 │ ├── models/
 │ └── pages/
-```
-
+</pre>
 
 
 ## ⚙️ Getting Started
