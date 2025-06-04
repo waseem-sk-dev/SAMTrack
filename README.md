@@ -1,27 +1,152 @@
-# SamTrack638
+<!-- PROJECT SHIELD BADGES -->
+<p align="center">
+  <a href="https://github.com/waseem-sk-dev/samtrack">
+    <img src="https://img.shields.io/github/stars/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Stars">
+  </a>
+  <a href="https://github.com/waseem-sk-dev/samtrack">
+    <img src="https://img.shields.io/github/forks/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Forks">
+  </a>
+  <a href="https://github.com/waseem-sk-dev/samtrack/issues">
+    <img src="https://img.shields.io/github/issues/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="Issues">
+  </a>
+  <a href="https://github.com/waseem-sk-dev/samtrack/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/waseem-sk-dev/samtrack.svg?style=for-the-badge" alt="License">
+  </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+<br />
 
-## Development server
+<h1 align="center">📊 SamTrack</h1>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+  A real-time admin and user tracking system with a responsive dashboard, built using <b>Spring Boot</b> and <b>Angular</b>.
+  <br />
+  <a href="#features">Explore Features</a>
+  ·
+  <a href="#getting-started">Installation</a>
+  ·
+  <a href="#screenshots">Screenshots</a>
+  ·
+  <a href="#contributing">Contribute</a>
+  ·
+  <a href="#license">License</a>
+</p>
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##  Overview
 
-## Build
+**SamTrack** is a full-stack web application that provides a comprehensive admin dashboard for managing users, tracking attendance, and monitoring activity. Designed with clean architecture and a modern UI, it ensures smooth navigation, responsive layouts, and real-time interactions.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+##  Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- 🔐 Role-based Authentication (Admin/User)
+- 👤 Add, View, Edit, Deactivate Users
+- 📆 Attendance & Activity Tracking
+- 📊 Responsive Dashboard with Widgets
+- 📥 Export Data (Coming Soon)
+- 📫 Email Notifications (Optional Setup)
+- 🧩 Modular Code Architecture
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠 Tech Stack
 
-## Further help
+| Layer        | Technologies |
+|--------------|--------------|
+| **Frontend** | Angular, TypeScript, CSS |
+| **Backend**  | Spring Boot, Rest Apis, Spring Data JPA |
+| **Database** | MySQL  |
+| **Dev Tools**| Git, GitHub, Postman, VS Code, IntelliJ IDEA |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## 📁 Project Structure
+<pre>
+samtrack/
+├── backend/
+│ └── src/main/java/com/samtrack/
+│ ├── controller/
+│ ├── service/
+│ ├── model/
+│ └── repository/
+├── frontend/
+│ └── src/app/
+│ ├── components/
+│ ├── services/
+│ ├── models/
+│ └── pages/
+</pre>
+
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+- [Java 17+](https://adoptium.net/)
+- [Maven](https://maven.apache.org/)
+- [MySQL](https://www.mysql.com/)
+
+---  
+
+## Installation
+
+1. **Clone the repo**
+```bash
+git clone https://github.com/yourusername/samtrack.git
+```
+Backend Setup
+
+```bash
+cd samtrack/backend
+mvn clean install
+mvn spring-boot:run
+```
+Frontend Setup
+
+```bash
+cd samtrack/frontend
+npm install
+ng serve
+Visit in Browser
+```
+---
+
+```bash
+
+Frontend: http://localhost:4200
+Backend API: http://localhost:8080/api/
+```
+<!--📷 Screenshots
+(Add your real screenshots in the assets/screenshots/ folder and embed below)-->
+
+<p align="center"> <img src="assets/screenshots/dashboard.png" width="90%" /> <img src="assets/screenshots/user-management.png" width="90%" /> </p>
+
+
+🤝 Contributing
+Contributions are welcome! To get started:
+```
+Fork the repository
+
+Create your feature branch: git checkout -b feature/my-feature
+
+Commit your changes: git commit -m 'Add my feature'
+
+Push to the branch: git push origin feature/my-feature
+
+Open a pull request
+```
+### License
+Distributed under the MIT License. See LICENSE for more information.
+
+<pre>
+Waseem Sk Dev
+📍 Pune, Maharashtra
+📫 shaikhrgp@gmail.com
+  </pre>
+
+<p align="center">⭐️ Star this repo to support the project!</p>
