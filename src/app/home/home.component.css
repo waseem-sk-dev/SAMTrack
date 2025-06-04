@@ -1,0 +1,286 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Neutral Light */
+  color: #333333; /* Neutral Dark */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  background-color: #004aad; /* Primary Blue */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 74, 173, 0.4); /* subtle shadow */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  user-select: none;
+}
+
+.logo-img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 4px;
+  object-fit: cover;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+.nav-links a {
+  color: #ffffff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a i {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #d9722c; /* Accent Orange */
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Info Button */
+.inf-button {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.inf-button button {
+  background-color: #004aad;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inf-button button:hover,
+.inf-button button:focus {
+  background-color: #003a91;
+  box-shadow: 0 0 8px #003a91aa;
+  outline: none;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("/assets/bg-home.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  position: relative;
+  /* Overlay to improve text readability */
+  position: relative;
+  margin-top: 80px; /* Adjust for fixed header */
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 74, 173, 0.5); /* Blue overlay */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgb(0 74 173 / 0.2);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: #004aad;
+}
+
+.hero-content p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #444;
+}
+
+.hero-buttons button {
+  background-color: #004aad;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.hero-buttons button:hover,
+.hero-buttons button:focus {
+  background-color: #003a91;
+  box-shadow: 0 0 10px #003a91cc;
+  outline: none;
+}
+
+/* Info Section */
+.info-section {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 3rem auto 4rem auto;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(172, 88, 88, 0.05);
+  color: #333;
+  transition: opacity 0.5s ease;
+}
+
+.info-section h2 {
+  color: #004aad;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.info-section ul {
+  padding-left: 1.4rem;
+  margin-bottom: 1.2rem;
+  list-style-type: disc;
+}
+
+.info-section li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Hide/Show with fade effect */
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #004aad;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.footer-links {
+  margin: 1rem 0 0.75rem 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #d9722c;
+  outline: none;
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.6rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #d9722c;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1rem;
+  }
+  .nav-links a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .hero-content {
+    padding: 1.5rem 2rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .info-section {
+    margin: 2rem 1rem 3rem 1rem;
+    padding: 1.5rem 1.5rem;
+  }
+  .footer-links a {
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+  }
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #d9722c;
+  outline-offset: 3px;
+}

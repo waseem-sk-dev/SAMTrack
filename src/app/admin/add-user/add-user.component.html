@@ -1,0 +1,177 @@
+<div class="card">
+  <div class="svg-section">
+    <img
+      src="/assets/signup.jpg"
+      alt="Register illustration"
+      class="register-svg"
+    />
+  </div>
+
+  <div class="form-section">
+    <h2>Add New User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">
+          <lucide-icon name="user" class="icon"></lucide-icon> Username
+        </label>
+        <input
+          id="username"
+          formControlName="username"
+          type="text"
+          placeholder="Enter username"
+          required
+        />
+        <small
+          *ngIf="
+            userForm.controls['username'].touched &&
+            userForm.controls['username'].invalid
+          "
+          class="error"
+        >
+          Username is required.
+        </small>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="password">
+          <lucide-icon name="lock" class="icon"></lucide-icon> Password
+        </label>
+        <div class="password-wrapper">
+          <input
+            id="password"
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            placeholder="Enter password"
+            required
+          />
+          <button
+            type="button"
+            class="toggle-icon"
+            (click)="togglePassword()"
+            aria-label="Toggle Password Visibility"
+          >
+            <lucide-icon
+              [name]="showPassword ? 'eye-off' : 'eye'"
+              class="icon"
+            ></lucide-icon>
+          </button>
+        </div>
+        <small
+          *ngIf="
+            userForm.controls['password'].touched &&
+            userForm.controls['password'].errors
+          "
+          class="error"
+        >
+          <span *ngIf="userForm.controls['password'].errors['required']"
+            >Password is required.</span
+          >
+          <span *ngIf="userForm.controls['password'].errors['minlength']"
+            >Password must be at least 6 characters.</span
+          >
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">
+          <lucide-icon name="user-circle" class="icon"></lucide-icon> First Name
+        </label>
+        <input
+          id="firstName"
+          formControlName="firstName"
+          type="text"
+          placeholder="Enter first name"
+          required
+        />
+        <small
+          *ngIf="
+            userForm.controls['firstName'].touched &&
+            userForm.controls['firstName'].invalid
+          "
+          class="error"
+        >
+          First name is required.
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">
+          <lucide-icon name="user-circle-2" class="icon"></lucide-icon> Last
+          Name
+        </label>
+        <input
+          id="lastName"
+          formControlName="lastName"
+          type="text"
+          placeholder="Enter last name"
+          required
+        />
+        <small
+          *ngIf="
+            userForm.controls['lastName'].touched &&
+            userForm.controls['lastName'].invalid
+          "
+          class="error"
+        >
+          Last name is required.
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">
+          <lucide-icon name="mail" class="icon"></lucide-icon> Email
+        </label>
+        <input
+          id="email"
+          formControlName="email"
+          type="email"
+          placeholder="Enter email address"
+          required
+        />
+        <small
+          *ngIf="
+            userForm.controls['email'].touched &&
+            userForm.controls['email'].errors
+          "
+          class="error"
+        >
+          <span *ngIf="userForm.controls['email'].errors['required']"
+            >Email is required.</span
+          >
+          <span *ngIf="userForm.controls['email'].errors['email']"
+            >Please enter a valid email.</span
+          >
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="role">
+          <lucide-icon name="briefcase" class="icon"></lucide-icon> Role
+        </label>
+        <select id="role" formControlName="role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="faculty">Faculty</option>
+        </select>
+        <small
+          *ngIf="
+            userForm.controls['role'].touched &&
+            userForm.controls['role'].invalid
+          "
+          class="error"
+        >
+          Role is required.
+        </small>
+      </div>
+
+      <button
+        class="login-btn"
+        type="submit"
+        [disabled]="loading || userForm.invalid"
+      >
+        {{ loading ? "Saving..." : "Register User" }}
+      </button>
+    </form>
+  </div>
+</div>

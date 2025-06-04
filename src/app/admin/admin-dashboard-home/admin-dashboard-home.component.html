@@ -1,0 +1,49 @@
+<div class="dashboard-container">
+  <h2>Welcome, Admin</h2>
+
+  <div class="stats-cards" role="region" aria-label="Statistics summary">
+    <div class="card" tabindex="0">
+      <h3>Total Users</h3>
+      <p>{{ totalUsers }}</p>
+    </div>
+    <div class="card" tabindex="0">
+      <h3>Avg Attendance Today</h3>
+      <p>{{ avgAttendance }}%</p>
+    </div>
+    <div class="card" tabindex="0">
+      <h3>Reports Submitted</h3>
+      <p>{{ reportsSubmitted }}</p>
+    </div>
+    <div class="card" tabindex="0">
+      <h3>Active Subjects</h3>
+      <p>{{ activeSubjects }}</p>
+    </div>
+  </div>
+
+  <section class="attendance-table" aria-label="Today's attendance overview">
+    <h4>Today's Attendance Overview</h4>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">User</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Status</th>
+          <th scope="col">Time In</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of attendanceRecords">
+          <td>{{ record.user }}</td>
+          <td>{{ record.subject }}</td>
+          <td
+            [class.present]="record.status === 'Present'"
+            [class.absent]="record.status === 'Absent'"
+          >
+            {{ record.status }}
+          </td>
+          <td>{{ record.timeIn }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

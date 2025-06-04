@@ -1,0 +1,46 @@
+<div class="admin-container">
+  <!-- Header -->
+  <header class="admin-header">
+    <h1>Admin Dashboard</h1>
+    <button class="logout-btn" routerLink="/login">
+      <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+      <span>Logout</span>
+    </button>
+  </header>
+
+  <!-- Sidebar -->
+  <aside
+    class="admin-sidebar"
+    [class.open]="sidebarOpen"
+    (keydown.escape)="sidebarOpen = false"
+    tabindex="0"
+  >
+    <nav>
+      <a routerLink="/admin-dashboard/add-user" routerLinkActive="active">
+        <i class="fas fa-user-plus"></i> Add User
+      </a>
+      <a routerLink="/admin-dashboard/all-users" routerLinkActive="active">
+        <i class="fas fa-users"></i> All Users
+      </a>
+      <a
+        routerLink="/admin-dashboard/view-all-attendance"
+        routerLinkActive="active"
+      >
+        <i class="fas fa-calendar-check"></i> Attendance
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Sidebar Overlay -->
+  <div
+    class="sidebar-overlay"
+    *ngIf="sidebarOpen"
+    (click)="toggleSidebar()"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Main Content -->
+  <main class="admin-main" [class.sidebar-open]="sidebarOpen">
+    <router-outlet></router-outlet>
+  </main>
+</div>

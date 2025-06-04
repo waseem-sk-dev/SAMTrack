@@ -1,0 +1,73 @@
+<div class="all-users-container">
+  <h2><i class="fas fa-users"></i> All Registered Users</h2>
+
+  <div class="filters">
+    <div class="input-group">
+      <i class="fas fa-search input-icon"></i>
+      <input
+        type="text"
+        placeholder="Search by name, email or username"
+        [(ngModel)]="searchText"
+        (ngModelChange)="onFilterChange()"
+      />
+    </div>
+
+    <div class="select-group">
+      <i class="fas fa-user-tag input-icon"></i>
+      <select [(ngModel)]="selectedRole" (ngModelChange)="onFilterChange()">
+        <option value="All">All Roles</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+        <option value="faculty">Faculty</option>
+      </select>
+    </div>
+
+    <button class="reset-btn" (click)="resetFilters()">
+      <i class="fas fa-sync-alt"></i> Reset Filters
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th><i class="fas fa-user"></i> Username</th>
+          <th><i class="fas fa-envelope"></i> Email</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <app-user-actions
+              [user]="user"
+              (edit)="onEditUser($event)"
+              (delete)="onDeleteUser($event)"
+            ></app-user-actions>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <button (click)="onPageChange(page - 1)" [disabled]="page === 0">
+      <i class="fas fa-chevron-left"></i> Prev
+    </button>
+    <span>Page {{ page + 1 }} of {{ totalUsers | number }}</span>
+    <button
+      (click)="onPageChange(page + 1)"
+      [disabled]="(page + 1) * size >= totalUsers"
+    >
+      Next <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

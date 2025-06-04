@@ -1,0 +1,89 @@
+<button class="back-btn-absolute" routerLink="/">
+  <i class="fa fa-home" aria-hidden="true" style="margin-right: 8px"></i> Home
+</button>
+
+<div class="login-container">
+  <div class="login-image" aria-hidden="true"></div>
+
+  <div class="login-form-container">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onLogin()"
+      class="login-form"
+      novalidate
+    >
+      <h2>Login</h2>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          formControlName="username"
+          placeholder="Enter username"
+          autocomplete="username"
+          aria-required="true"
+          [class.invalid]="
+            username.invalid && (username.dirty || username.touched)
+          "
+        />
+        <small
+          class="error"
+          *ngIf="username.errors && (username.dirty || username.touched)"
+        >
+          <span *ngIf="username.errors['required']">Username is required.</span>
+          <span *ngIf="username.errors['minlength']"
+            >Minimum 4 characters.</span
+          >
+          <span *ngIf="username.errors['pattern']">
+            Only letters, numbers, underscores, dots, and hyphens.
+          </span>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-field">
+          <input
+            id="password"
+            [type]="showPassword ? 'text' : 'password'"
+            formControlName="password"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            aria-required="true"
+            [class.invalid]="
+              password.invalid && (password.dirty || password.touched)
+            "
+          />
+          <button
+            type="button"
+            class="toggle-btn"
+            (click)="togglePassword()"
+            [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+          >
+            <fa-icon [icon]="showPassword ? faLockOpen : faLock"></fa-icon>
+          </button>
+        </div>
+        <small
+          class="error"
+          *ngIf="password.errors && (password.dirty || password.touched)"
+        >
+          <span *ngIf="password.errors['required']">Password is required.</span>
+          <span *ngIf="password.errors['minlength']"
+            >Minimum 6 characters.</span
+          >
+        </small>
+      </div>
+
+      <!-- Loading Overlay -->
+      <div *ngIf="loading" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Authenticating...</p>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid" class="submit-btn">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,209 @@
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn i {
+  font-size: 1.2rem;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1001;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: var(--blue-50);
+  border-right: 1px solid var(--blue-200);
+  padding-top: 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+.admin-sidebar.open {
+  left: 0;
+}
+
+.admin-sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: var(--blue-900);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.admin-sidebar a:hover {
+  background-color: var(--blue-100);
+  color: var(--blue-800);
+}
+.admin-sidebar a i {
+  margin-right: 10px;
+}
+
+/* Main Content */
+.admin-main {
+  margin-left: 220px;
+  padding: 2rem;
+  padding-top: 80px;
+  background: var(--bg-light);
+}
+
+/* Header */
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--blue-600);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--blue-300);
+  z-index: 1000;
+}
+.admin-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--text-light);
+}
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  display: none;
+}
+
+/* Dashboard Cards */
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.card {
+  flex: 1 1 220px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  border-left: 4px solid var(--blue-400);
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.card h3 {
+  font-size: 1rem;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+.card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--blue-900);
+}
+
+/* Table */
+.attendance-table {
+  margin-top: 2rem;
+}
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.attendance-table th {
+  background-color: var(--blue-100);
+  color: var(--blue-900);
+  font-weight: bold;
+}
+.attendance-table tr:hover {
+  background-color: var(--blue-50);
+}
+.attendance-table td {
+  color: var(--text-dark);
+}
+
+/* Status colors */
+.present {
+  color: green;
+  font-weight: bold;
+}
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    left: -100%;
+    width: 70%;
+  }
+
+  .admin-sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 auto;
+    margin-bottom: 1rem;
+  }
+}
