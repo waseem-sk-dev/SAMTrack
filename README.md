@@ -34,13 +34,13 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **SamTrack** is a full-stack web application that provides a comprehensive admin dashboard for managing users, tracking attendance, and monitoring activity. Designed with clean architecture and a modern UI, it ensures smooth navigation, responsive layouts, and real-time interactions.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - 🔐 Role-based Authentication (Admin/User)
 - 👤 Add, View, Edit, Deactivate Users
@@ -52,7 +52,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 | Layer        | Technologies |
 |--------------|--------------|
@@ -61,7 +61,7 @@
 | **Database** | MySQL  |
 | **Dev Tools**| Git, GitHub, Postman, VS Code, IntelliJ IDEA |
 
----
+
 
 ## 📁 Project Structure
 ```
@@ -92,8 +92,10 @@ samtrack/
 - [Maven](https://maven.apache.org/)
 - [MySQL](https://www.mysql.com/)
 
+  ---
+
 ### Installation
-```
+
 1. **Clone the repo**
 ```bash
 git clone https://github.com/yourusername/samtrack.git
@@ -125,7 +127,7 @@ Backend API: http://localhost:8080/api/
 
 <p align="center"> <img src="assets/screenshots/dashboard.png" width="90%" /> <img src="assets/screenshots/user-management.png" width="90%" /> </p>
 
----
+
 🤝 Contributing
 Contributions are welcome! To get started:
 ```
@@ -143,10 +145,11 @@ Open a pull request
 
 📝 License
 Distributed under the MIT License. See LICENSE for more information.
-```
 
+<pre>
 Waseem Sk Dev
 📍 Pune, Maharashtra
 📫 shaikhrgp@gmail.com
-```
+  </pre>
+
 <p align="center">⭐️ Star this repo to support the project!</p>
