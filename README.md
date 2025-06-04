@@ -119,15 +119,15 @@ Visit in Browser
 
 Frontend: http://localhost:4200
 Backend API: http://localhost:8080/api/
-📷 Screenshots
-(Add your real screenshots in the assets/screenshots/ folder and embed below)
+<!--📷 Screenshots
+(Add your real screenshots in the assets/screenshots/ folder and embed below)-->
 
 <p align="center"> <img src="assets/screenshots/dashboard.png" width="90%" /> <img src="assets/screenshots/user-management.png" width="90%" /> </p>
 ```
 ---
 🤝 Contributing
 Contributions are welcome! To get started:
-
+```
 Fork the repository
 
 Create your feature branch: git checkout -b feature/my-feature
@@ -137,10 +137,12 @@ Commit your changes: git commit -m 'Add my feature'
 Push to the branch: git push origin feature/my-feature
 
 Open a pull request
+```
+---
 
 📝 License
 Distributed under the MIT License. See LICENSE for more information.
-
+```
 👤 Author
 Waseem Sk Dev
 📍 Pune, Maharashtra
